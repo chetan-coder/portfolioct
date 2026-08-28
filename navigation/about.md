@@ -7,7 +7,7 @@ comments: true
 
 ## As a Conversation Starter
 
-Hi, my name is Chet. I am usually playing videogames, outside, or taking a nap.  
+Hi, my name is Chetan Tiduwar. I am usually playing videogames, outside, or taking a nap.  
 I moved here when I was 4. I started playing basketball when I was 5 and still continue playing it today.  
 Another fact about me is that I have a sister who is 5 years old.
 
