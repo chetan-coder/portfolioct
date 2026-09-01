@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-OST ?= localhost
-=======
 HOST ?= localhost
->>>>>>> upstream/main
 PORT ?= 4500
 LOG_FILE = /tmp/jekyll$(PORT).log
 PYTHON := venv/bin/python3
@@ -197,11 +193,6 @@ serve-yat: use-yat clean
 # Project Targets
 ###########################################
 
-<<<<<<< HEAD
-# Build all registered projects (game assets, not docs)
-build-registered-projects:
-	$(call run_projects,$(ALL_PROJECTS),Building,build)
-=======
 # Generate Makefiles for all registered projects
 generate-makefiles:
 	@echo "Generating Makefiles for registered projects..."
@@ -223,16 +214,12 @@ build-registered-projects:
 	$(call run_projects,$(ALL_PROJECTS),Building,build)
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py
->>>>>>> upstream/main
 
 build-dev-projects:
 	@echo "Active DEV Projects: $(ACTIVE_DEV_PROJECTS)"
 	$(call run_projects,$(ACTIVE_DEV_PROJECTS),Building,build)
-<<<<<<< HEAD
-=======
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py 2>&1 || echo "⚠️  SASS import generation failed"
->>>>>>> upstream/main
 
 # Convert notebooks for dev projects only (dev mode initial build)
 convert-registered-notebooks:
@@ -275,11 +262,8 @@ build-yat: use-yat build-current
 
 build-current: clean convert split-courses
 	@bundle install
-<<<<<<< HEAD
-=======
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py 2>&1 || echo "⚠️  SASS import generation failed"
->>>>>>> upstream/main
 	@bundle exec jekyll clean
 	@bundle exec jekyll build
 
@@ -430,10 +414,7 @@ watch-rebuild:
 # Runs in background - use 'make stop' to stop, 'tail -f /tmp/jekyll4500.log' to view logs
 dev: stop clean
 	@echo "DEV Projects: $(ACTIVE_DEV_PROJECTS)"
-<<<<<<< HEAD
-=======
 	@$(MAKE) generate-makefiles
->>>>>>> upstream/main
 	@$(MAKE) build-dev-projects ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
 	@$(MAKE) convert-registered-notebooks ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
 	@$(MAKE) jekyll-serve ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
@@ -644,8 +625,4 @@ list-projects:
 ###########################################
 
 %:
-<<<<<<< HEAD
 	@:
-=======
-	@:
->>>>>>> upstream/main
